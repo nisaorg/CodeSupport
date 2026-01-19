@@ -215,3 +215,23 @@ DESCRIBE nombre_bd.tabla;
 ```sql
 SHOW CREATE TABLE nombre_tabla;
 ```
+## Función longitud de una cadena de texto
+```sql
+SELECT LENGTH('hola'); /*Devuelve 4*/
+```
+## A una función también puede pasársele como parámetro una columna
+```sql
+SELECT nombre, LENGTH(nombre) FROM plataforma; /*Muestra el nombre de cada plataforma y la longitud de ese nombre (en caracteres)*/
+```
+## Función valor absoluto
+```sql
+SELECT ABS(-5), ABS(3); /*Devuelve 5 y 3*/
+```
+Función raíz cuadrada
+```sql
+SELECT SQRT(4); /*Devuelve 2*/
+```
+## Función resta de fechas (devuelve el resultado en días)
+```sql
+SELECT DATEDIFF('2025-01-12', '2020-05-25') /*Devuelve la diferencia en días entre esas dos fechas*/
+```
