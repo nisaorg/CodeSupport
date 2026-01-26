@@ -235,3 +235,23 @@ SELECT SQRT(4); /*Devuelve 2*/
 ```sql
 SELECT DATEDIFF('2025-01-12', '2020-05-25') /*Devuelve la diferencia en días entre esas dos fechas*/
 ```
+## Funcion ABS que los numeros negativos los pasa a positivos, si el digito es positivo, lo deja como está
+```sql
+SELECT ABS (-17);
+```
+## Consultas anidadas
+Libro más reciente publicado
+```sql
+SELECT * FROM libro WHERE anyo=(SELECT MAX(anyo) FROM libro);
+```
+Libro más barato
+```sql
+SELECT * FROM libro WHERE precio=(SELECT MIN(precio) FROM libro);
+```
+## Alias
+```sql
+/*Opcion 1 | los alias solo son usables en el mismo comando en el que son designados*/
+SELECT * FROM persona p WHERE NOT EXISTS (SELECT * FROM dirige d WHERE p.id_persona=d.id_persona);
+/*Opcion 2*/
+SELECT * FROM persona WHERE id_persona NOT IN (SELECT id_persona FROM dirige);
+```

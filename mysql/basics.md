@@ -6,6 +6,10 @@ Mostrar bases de datos
 ```sql
 SHOW DATABASES;
 ```
+Mostrar propiedades de la tabla
+```sql
+DESCRIBE table;
+```
 Mostrar tablas de una base de datos
 ```sql
 SHOW TABLES IN nombre;
