@@ -46,3 +46,9 @@ SELECT id, id, id FROM id WHERE id LIKE 'Ejem%' AND id>9;
 /*Muestra la coincidencia encontrada cuando se encuentra entre los prametros indicados (888 y 999)*/
 SELECT id, id, id FROM id WHERE id BETWEEN 888 AND 999;
 ```
+Mostrar promedio de contenido
+```sql
+SELECT id, AVG(id) FROM id GROUP BY id ORDER BY AVG(id) DESC;
+/*Para cada autor, muestra el precio promedio de sus libros, ordenando el output por precio del más caro al más barato*/
+/*select autor, avg(precio) from libro group by autor order by avg(precio) desc;*/
+```
