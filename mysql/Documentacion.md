@@ -255,3 +255,13 @@ SELECT * FROM persona p WHERE NOT EXISTS (SELECT * FROM dirige d WHERE p.id_pers
 /*Opcion 2*/
 SELECT * FROM persona WHERE id_persona NOT IN (SELECT id_persona FROM dirige);
 ```
+## Contar
+```sql
+/*Mostrar numero de peliculas que hay por país*/
+SELECT pais, COUNT(*) FROM pelicula GROUP BY pais;
+```
+## Agrupar
+```sql
+/*Mostrar peliculas por pais, que sean posteriores al año 2000 de forma ascendente*/
+SELECT pais, COUNT(*) FROM pelicula WHERE anyo>"2000" GROUP BY pais order by pais DESC;
+```

@@ -1,0 +1,6 @@
+CREATE DATABSE IF NOT EXISTS tabla1(
+    id INT PRIMARY KEY,
+    nombre VARCHAR(16) NOT NULL,
+    apellido VARCHAR(16) NOT NULL,
+    
+)
