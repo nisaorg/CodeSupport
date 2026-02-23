@@ -1,5 +1,12 @@
 uniones entre varias tablas
 
+Combinación de tablas:
+- Join (deben tener el mismo numero de columnas)
+Unión de consultas:
+- Select
+- From
+- Union
+
 INNER: Solo las que coinciden
 LEFT: Dar prioridad a la derecha
 RIGHT: Dar prioridad a la izquierda
