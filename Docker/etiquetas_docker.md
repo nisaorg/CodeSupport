@@ -6,3 +6,4 @@ docker run -l servicio=web -l entorno=desarrollo -l aplicacion=apache --name pru
 docker run -l servicio=web -l entorno=desarrollo -l aplicacion=apache --name prueba_db ubuntu
 docker run -l servicio=web -l entorno=desarrollo -l aplicacion=apache --name web ubuntu
 docker run -l servicio=web -l entorno=desarrollo -l aplicacion=apache --name db ubuntu
+```
