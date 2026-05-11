@@ -87,3 +87,13 @@ SELECT esDivisible(4,2); --TRUE
 SELECT esDivisible(2,2); -- TRUE
 SELECT esDivisible(15,-3); -- TRUE
 SELECT esDivisible(8,3); -- FALSE
+
+DELIMITER //
+CREATE OR REPLACE FUNCTION hayHuecos() RETURNS BOOLEAN
+READS
+BEGIN
+    DECLARE v_contador INT DEFAULT 0;
+    DECLARE v_maxid INT DEFAULT 0;
+    SELECT COUNT(*), MAX(id_plataforma) INTO v_contador, v_maxid FROM bd_juego.plataforma;
+    RETURN v_contador < v_maxid;
+END//
