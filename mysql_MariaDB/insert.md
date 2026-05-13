@@ -38,10 +38,10 @@ DELETE FROM prestamo WHERE fecha_inicio<'2010-01-01'
 DELETE FROM prestamo;
 ```
 
-Atomicity: una transacción debe ser indivisible.
-Consistency: una transacción debe hacer transitar la base de datos desde un estado inicial consistente a otro final consistente. Definición de consistente: una base de datos está en un estado consistente cuando se respetan todas las restricciones de integridad impuestas sobre ella.
-Isolation (Aislamiento): permite a una transacción aislarse de cambios que puedan producir otras transacciones que se están ejecutando simultáneamente.
-Durability: Propiedad que garantiza que los cambios que produce una transacción una vez confirmada, se escriben de manera permanente en la base de datos.
+- Atomicity: una transacción debe ser indivisible.
+- Consistency: una transacción debe hacer transitar la base de datos desde un estado inicial consistente a otro final consistente. - Definición de consistente: una base de datos está en un estado consistente cuando se respetan todas las restricciones de integridad impuestas sobre ella.
+- Isolation (Aislamiento): permite a una transacción aislarse de cambios que puedan producir otras transacciones que se están ejecutando simultáneamente.
+- Durability: Propiedad que garantiza que los cambios que produce una transacción una vez confirmada, se escriben de manera permanente en la base de datos.
 
 En un SGBD transaccional existen dos sentencias para terminar una transacción:
 
@@ -64,13 +64,9 @@ Read committed
 Una transacción con este nivel de aislamiento no puede ver los cambios que realiza otra transacción concurrente todavía no confirmada.
 
 Repeatable read
-A transaction with this isolation level guarantees repeatable reads, although are still vulnerable to phantom reads.
-
 Una transacción con este nivel de aislamiento garantiza lecturas repetibles, aunque sigue siendo vulnerable a lecturas fantasma.
 
 Serializable
-Is the highest isolation level. ANSI/SQL standard define this isolation level as one that achieves that the execution of several concurrent transactions produces the same result as if the were executed sequentially.
-
 Es el nivel de aislamiento más alto. El estándar ANSI/SQL lo define como uno que logra que la ejecución de varias transacciones concurrentes produzcan el mismo resultado que si se ejecutaran de forma secuencial (una detrás de otra).
 
 Cómo establecer en MariaDB el nivel de aislamiento de una transacción
